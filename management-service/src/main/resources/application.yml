@@ -1,0 +1,40 @@
+server:
+  port: 8500
+spring:
+  profiles:
+    active: dev
+  application:
+    name: management-service
+  datasource:
+    dbcp2:
+      validation-query: SELECT 1
+      test-on-borrow: true
+      max-idle: 11
+      initial-size: 10
+      test-while-idle: true
+      max-wait-millis: 10000
+      min-idle: 10
+      
+      
+#    
+## data source config 
+## https://tomcat.apache.org/tomcat-8.0-doc/jdbc-pool.html#Common_Attributes
+#spring.datasource.tomcat.validationQuery=SELECT 1
+##spring.datasource.tomcat.validationInterval=30000
+#spring.datasource.tomcat.testOnBorrow=true
+#spring.datasource.tomcat.maxActive=150
+#spring.datasource.tomcat.maxIdle=11
+##spring.datasource.tomcat.timeBetweenEvictionRunsMillis=30000
+##spring.datasource.tomcat.minEvictableIdleTimeMillis=30000
+##spring.datasource.tomcat.removeAbandoned=true
+##spring.datasource.tomcat.removeAbandonedTimeout=60
+#spring.datasource.tomcat.initial-size=10
+#spring.datasource.tomcat.test-while-idle=true
+#spring.datasource.tomcat.test-on-return=true
+#spring.datasource.tomcat.max-wait=10000
+#spring.datasource.tomcat.min-idle=10
+##spring.datasource.tomcat.log-abandoned=true
+##spring.datasource.tomcat.remove-abandoned=true
+#spring.datasource.tomcat.jmx-enabled=true
+#spring.datasource.tomcat.log-validation-errors=true
+#spring.datasource.tomcat.validation-query-timeout=10
